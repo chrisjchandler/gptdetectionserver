@@ -1,0 +1,35 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPT Detection Applet</title>
+  </head>
+  <body>
+    <h1>GPT Detection Applet</h1>
+    <form action="/analyze" method="post">
+      <textarea name="text"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script>
+      const form = document.querySelector('form');
+      const result = document.querySelector('#result');
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        const data = new FormData(form);
+
+        fetch('/analyze', {
+          method: 'POST',
+          body: data,
+        })
+          .then(response => response.text())
+          .then(text => {
+            result.textContent = text;
+          });
+      });
+    </script>
+  </body>
+</html>
