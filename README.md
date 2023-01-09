@@ -1,3 +1,5 @@
+POC site @http://detectgptforme.com/
+
 requisites, This can run with FLASK, but shouldn't be put to internet facing production with that back end. 
 
 You need an OPENAI key, obtainable for free @ openai.com
