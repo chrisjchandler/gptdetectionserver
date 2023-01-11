@@ -1,4 +1,4 @@
-POC site @http://detectgptforme.com/
+POC site @https://detectgptforme.com/
 
 requisites, This can run with FLASK, but shouldn't be put to internet facing production with that back end. 
 
